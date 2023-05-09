@@ -1,0 +1,236 @@
+:root {
+    --primary-color-400: hsl(185, 75%, 39%);
+
+    --secondary-color-500: hsl(227, 10%, 46%);
+    --secondary-color-800: hsl(229, 23%, 23%);
+
+    --neutral-color-0: hsl(0, 0%, 100%);
+    --neutral-color-400: hsl(0, 0%, 59%);
+    --neutral-color-border: hsla(0, 0%, 59%, 0.3);
+
+    --font-family-kumbhSans: 'Kumbh Sans', sans-serif;
+
+    --font-size-100: 0.702rem;
+    --font-size-200: 0.889rem;
+    --font-size-300: 0.937rem;
+    --font-size-400: 1rem;
+    --font-size-500: 1.125rem;
+    --font-size-600: 1.25rem;
+    --font-size-700: 1.313rem;
+
+    --font-size-desktop-100: 0.743rem;
+    --font-size-desktop-600: 1.188rem;
+
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-image: 
+        url(images/bg-pattern-top.svg),
+        url(images/bg-pattern-bottom.svg);
+    background-color: var(--primary-color-400);
+    background-position: 
+        top -255px left -290px,
+        bottom -221px right -299px;
+    background-repeat: no-repeat;
+    background-size: 
+        500px;
+    overflow: hidden;
+    font-family: var(--font-family-kumbhSans);
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+.main-container {
+    margin-bottom: 50px;
+}
+
+.profile.container {
+    width: 326px;
+    border-radius: 13px;
+}
+
+.profile-container__profile-description-container {
+    position: relative;
+    width: 326px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+.profile-container__profile-description-container__profile-background {
+    height: 141px;
+    width: 326px;
+    background-image: url(images/bg-pattern-card.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+}
+
+.profile-container__profile-description-container__profile-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid var(--neutral-color-0);
+    border-radius: 50%;
+}
+
+.profile-container__profile-description-container__user-container {
+    height: 145px;
+    padding-top: 70px;
+    text-align: center;
+    background-color: var(--neutral-color-0);
+    border-bottom: 1px solid var(--neutral-color-border);
+}
+
+.profile-container__profile-description-container__user-container__userName-age-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    margin-inline: auto;
+    margin-bottom: 3px;
+}
+
+.user-name {
+    display: block;
+    margin-right: 8px;
+    color: var(--secondary-color-800);
+    font-family: var(--font-family-kumbhSans);
+    font-size: var(--font-size-500);
+    font-weight: var(--font-weight-bold);
+}
+
+.user-age {
+    color: var(--neutral-color-400);
+    font-size: var(--font-size-500);
+
+}
+
+.user-location {
+    color: var(--neutral-color-400);
+    font-size: var(--font-size-200);
+}
+
+.profile-container__profile-stat-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 89px;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    background-color: var(--neutral-color-0);
+}
+
+.stat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stat {
+    color: var(--secondary-color-800);
+    font-size: var(--font-size-500);
+    font-weight: var(--font-weight-bold);
+}
+
+.stat-name {
+    letter-spacing: 1px;
+    color: var(--neutral-color-400);
+    font-size: var(--font-size-100);
+}
+
+.profile-container__profile-stat-container__followers-container {
+    padding-right: 10px;
+    justify-self: end;
+}
+
+.profile-container__profile-stat-container__photos-container {
+    padding-left: 10px;
+    justify-self: start;
+}
+
+@media screen and (min-width: 22.5rem) {
+    body {
+        background-position: 
+        top -400px left -210px, 
+        bottom -500px right -200px;
+        background-size: 900px;
+    }
+
+    .profile-container {
+        width: 350px;
+    }
+
+    .profile-container__profile-description-container {
+        width: 350px;
+    }
+
+    .profile-container__profile-description-container__profile-background {
+        width: 350px;
+        height: 140px;
+    }
+
+    .profile-container__profile-description-container__user-container {
+        width: 350px;
+        height: 145px;
+    }
+
+    .profile-container__profile-description-container__user-container__userName-age-container {
+        width: 205px;
+        margin-bottom: 0;
+    }
+
+    .profile-container__profile-stat-container {
+        height: 90px;
+    }
+
+    .user-name {
+        font-size: var(--font-size-700);
+    }
+
+    .user-age {
+        font-size: var(--font-size-600);
+    }
+
+    .user-location {
+        font-size: var(--font-size-300);
+    }
+
+    .stat {
+        font-size: var(--font-size-desktop-600);
+    }
+
+    .stat-name {
+        font-size: var(--font-size-desktop-100);
+    }
+}
