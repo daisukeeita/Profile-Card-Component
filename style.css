@@ -179,7 +179,7 @@ picture {
     justify-self: start;
 }
 
-@media screen and (min-width: 22.5rem) {
+@media screen and (min-width: 25rem) {
     body {
         background-position: 
         top -400px left -210px, 
