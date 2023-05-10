@@ -45,7 +45,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    background-image: 
+    /* background-image: 
         url(images/bg-pattern-top.svg),
         url(images/bg-pattern-bottom.svg);
     background-color: var(--primary-color-400);
@@ -54,7 +54,17 @@ body {
         bottom -221px right -299px;
     background-repeat: no-repeat;
     background-size: 
-        500px;
+        500px; */
+    background: 
+        url(./images/bg-pattern-top.svg), 
+        url(./images/bg-pattern-bottom.svg);
+    background-position: 
+        right 52vw bottom 35vh, 
+        left 48vw top 52vh;
+    background-repeat: 
+        no-repeat, 
+        no-repeat;
+    background-color: var(--primary-color-400);
     overflow: hidden;
     font-family: var(--font-family-kumbhSans);
 }
@@ -180,13 +190,6 @@ picture {
 }
 
 @media screen and (min-width: 25rem) {
-    body {
-        background-position: 
-        top -400px left -210px, 
-        bottom -500px right -200px;
-        background-size: 900px;
-    }
-
     .profile-container {
         width: 350px;
     }
